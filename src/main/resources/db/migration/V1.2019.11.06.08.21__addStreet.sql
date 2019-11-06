@@ -1,0 +1,1 @@
+alter table contract ADD COLUMN street VARCHAR;

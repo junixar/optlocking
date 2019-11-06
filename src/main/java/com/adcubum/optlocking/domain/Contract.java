@@ -4,10 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import org.hibernate.envers.Audited;
-
 @Entity
-@Audited
+//@Audited
 public class Contract {
 
    @Id
@@ -15,6 +13,12 @@ public class Contract {
 
    @Column
    public String name;
+   
+   @Column
+   public String type;
+   
+   @Column
+   public String street;
 
    //   @ManyToOne
    //   public Person person;

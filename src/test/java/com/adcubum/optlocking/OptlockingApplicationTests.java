@@ -39,28 +39,11 @@ public class OptlockingApplicationTests {
 		contract.id = UUID.randomUUID().toString();
 		contract.name = "testContract";
 
-		person.contracts = new ArrayList<>();
-		person.contracts.add(contract);
-
 		personService.save(person);
+		contractService.save(contract);
 
 		person = personService.find(person.id);
-		person.contracts.forEach(cntrct -> {
-			cntrct.name = "changedContractName0";
-		});
-		personService.save(person);
-
-		person = personService.find(person.id);
-		person.contracts.forEach(cntrct -> {
-			cntrct.name = "changedContractName1";
-		});
-		personService.save(person);
-
-		person = personService.find(person.id);
-		person.contracts.forEach(cntrct -> {
-			cntrct.name = "changedContractName2";
-		});
-		personService.save(person);
+		contract = contractService.find(contract.id);
 	}
 
 }
