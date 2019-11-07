@@ -38,6 +38,7 @@ public class OptlockingApplicationTests {
 		Contract contract = new Contract();
 		contract.id = UUID.randomUUID().toString();
 		contract.name = "testContract";
+		contract.valid = true;
 
 		personService.save(person);
 		contractService.save(contract);

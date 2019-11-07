@@ -1,1 +1,2 @@
-create table person (id int, name text, version int);
+create table contract (id varchar2(255 char) not null, name varchar2(255 char), street varchar2(255 char), type varchar2(255 char), valid number(1,0) not null, primary key (id));
+create table person (id varchar2(255 char) not null, name varchar2(255 char), pet varchar2(255 char), phone varchar2(255 char), version number(19,0), primary key (id));

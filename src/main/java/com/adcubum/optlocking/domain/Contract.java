@@ -19,6 +19,9 @@ public class Contract {
    
    @Column
    public String street;
+   
+   @Column(nullable = false)
+   public Boolean valid;
 
    //   @ManyToOne
    //   public Person person;
