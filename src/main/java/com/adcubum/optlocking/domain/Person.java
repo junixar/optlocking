@@ -1,17 +1,12 @@
 package com.adcubum.optlocking.domain;
 
-import java.util.Collection;
+import java.sql.Date;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Version;
 
 @Entity
-//@Audited
 public class Person {
 
    @Id
@@ -21,17 +16,6 @@ public class Person {
    public String name;
 
    @Column
-   @Version
-   public Long version;
+   public Date birthday;
    
-   @Column
-   public String phone;
-   
-   @Column
-   public String pet;
-
-//   @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-//   //@JoinColumn(name = "id", nullable = false)
-//   public Collection<Contract> contracts;
-
 }
