@@ -1,1 +1,1 @@
-ALTER TABLE person ADD COLUMN lastname varchar(255);
+ALTER TABLE person ADD lastname varchar2(255 char);
