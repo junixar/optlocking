@@ -1,1 +1,1 @@
-create table person (id varchar(255) not null, firstname varchar(255), version int8, primary key (id));
+create table person (id varchar2(255 char) not null, firstname varchar2(255 char), version number(19,0), primary key (id));
