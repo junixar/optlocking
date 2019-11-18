@@ -1,9 +1,10 @@
-package com.adcubum.optlocking.repository;
+package com.adcubum.migration.repository;
 
-import com.adcubum.optlocking.domain.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.adcubum.migration.domain.Person;
 
 import javax.persistence.EntityManager;
 import javax.persistence.LockModeType;

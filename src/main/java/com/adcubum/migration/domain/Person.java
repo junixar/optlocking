@@ -1,21 +1,24 @@
-package com.adcubum.optlocking.domain;
-
-import java.sql.Date;
+package com.adcubum.migration.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Version;
 
 @Entity
 public class Person {
 
    @Id
    public String id;
+   
+   @Column
+   @Version
+   public Long version;
 
    @Column
-   public String name;
+   public String firstname;
 
    @Column
-   public Date birthday;
+   public String lastname;
    
 }
