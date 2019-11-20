@@ -27,6 +27,14 @@
         	<column name="lastname" type="varchar(255)"/>
     	</addColumn>
 	</changeSet>
+	
+	<changeSet author="hugo"	id="3"	runAlways = "false"	runOnChange = "false"	failOnError = "true">
+    	<addColumn catalogName="cat"
+            schemaName="public"
+            tableName="person">
+        	<column name="partner_nr" type="BIGINT"/>
+    	</addColumn>
+	</changeSet>
 </databaseChangeLog>
 
 

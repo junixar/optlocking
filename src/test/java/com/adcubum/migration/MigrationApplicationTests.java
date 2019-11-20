@@ -30,6 +30,7 @@ public class MigrationApplicationTests {
 		person.id = UUID.randomUUID().toString();
 		person.firstname = "testFirstname";
 		person.lastname = "testLastname";
+		person.partnerNr = 77L;
 
 		personService.save(person);
 		person = personService.find(person.id);
