@@ -1,4 +1,4 @@
-package com.adcubum.optlocking.domain;
+package com.adcubum.migration.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,4 +12,7 @@ public class Person {
 
    @Column
    public String firstname;
+   
+   @Column
+   public String lastname;
 }

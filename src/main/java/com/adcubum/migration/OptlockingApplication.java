@@ -1,4 +1,4 @@
-package com.adcubum.optlocking;
+package com.adcubum.migration;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

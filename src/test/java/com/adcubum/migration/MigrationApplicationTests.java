@@ -1,4 +1,4 @@
-package com.adcubum.optlocking;
+package com.adcubum.migration;
 
 import java.util.UUID;
 
@@ -9,12 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.adcubum.optlocking.domain.Person;
-import com.adcubum.optlocking.repository.PersonService;
+import com.adcubum.migration.domain.Person;
+import com.adcubum.migration.repository.PersonService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest()
-public class OptlockingApplicationTests {
+public class MigrationApplicationTests {
 
 	@Autowired
 	private PersonService personService;
@@ -28,7 +28,8 @@ public class OptlockingApplicationTests {
 	public void test() {
 		Person person = new Person();
 		person.id = UUID.randomUUID().toString();
-		person.firstname = "testName";
+		person.firstname = "testFirstname";
+		person.lastname = "testLastname";
 
 		personService.save(person);
 		person = personService.find(person.id);

@@ -19,7 +19,7 @@ dependencies {
 	implementation "org.hibernate:hibernate-envers"
 	compile 'com.h2database:h2'
 	compile 'org.postgresql:postgresql'
-	compile 'org.flywaydb:flyway-core'
+	//compile 'org.flywaydb:flyway-core'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	compile 'org.springframework.boot:spring-boot-starter-web'
 
@@ -28,11 +28,11 @@ dependencies {
 	liquibaseRuntime 'org.postgresql:postgresql'
 }
 
-flyway {
-	url = 'jdbc:postgresql://localhost:5432/postgres'
-	user = 'postgres'
-	password = 'changeme'
-}
+//flyway {
+//	url = 'jdbc:postgresql://localhost:5432/postgres'
+//	user = 'postgres'
+//	password = 'changeme'
+//}
 
 liquibase {
 	activities {
