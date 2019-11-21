@@ -2,6 +2,7 @@ package com.adcubum.migration;
 
 import java.util.UUID;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -34,6 +35,7 @@ public class MigrationApplicationTests {
 
 		personService.save(person);
 		person = personService.find(person.id);
+		Assert.assertNotNull(person);
 	}
 
 }

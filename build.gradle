@@ -20,7 +20,6 @@ dependencies {
 	compile 'com.h2database:h2'
 	compile 'org.postgresql:postgresql'
 	compile("com.oracle.ojdbc:ojdbc8")
-	//compile 'org.flywaydb:flyway-core'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	compile 'org.springframework.boot:spring-boot-starter-web'
 	compile files('libs/ojdbc8-12.2.0.1.jar')
@@ -30,12 +29,6 @@ dependencies {
 	liquibaseRuntime 'org.postgresql:postgresql'
 }
 
-//flyway {
-//	url = 'jdbc:postgresql://localhost:5432/postgres'
-//	user = 'postgres'
-//	password = 'changeme'
-//}
-
 liquibase {
 	activities {
 		main {
@@ -43,6 +36,7 @@ liquibase {
 			url 'jdbc:oracle:thin:@//adzh-srlp-db02.intern.cube.ch:1521/pdb02h_5d9d9153205c5_test.adcubum.com'
 			username 'syrius'
 			password 'cube12'
+			classpath 'libs/ojdbc8-12.2.0.1.jar' 
 		}
 	}
 }

@@ -6,14 +6,14 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 	<changeSet author="hugo"	id="1"	runAlways = "false"	runOnChange = "false"	failOnError = "true">
-    	<createTable catalogName="cat"
+    	<createTable catalogName="syrius"
             remarks="A String"
             schemaName="public"
             tableName="person">
         	<column name="id" type="varchar(255)"/>
         	<column name="firstname" type="varchar(255)"/>
     	</createTable>
-    	<addPrimaryKey catalogName="cat"
+    	<addPrimaryKey catalogName="syrius"
             columnNames="id"
             constraintName="pk_person"
             schemaName="public"
@@ -21,7 +21,7 @@
 	</changeSet>
 	
 	<changeSet author="hugo"	id="2"	runAlways = "false"	runOnChange = "false"	failOnError = "true">
-    	<addColumn catalogName="cat"
+    	<addColumn catalogName="syrius"
             schemaName="public"
             tableName="person">
         	<column name="lastname" type="varchar(255)"/>
@@ -29,7 +29,7 @@
 	</changeSet>
 	
 	<changeSet author="hugo"	id="3"	runAlways = "false"	runOnChange = "false"	failOnError = "true">
-    	<addColumn catalogName="cat"
+    	<addColumn catalogName="syrius"
             schemaName="public"
             tableName="person">
         	<column name="partner_nr" type="BIGINT"/>
