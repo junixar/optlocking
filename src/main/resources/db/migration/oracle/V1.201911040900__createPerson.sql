@@ -1,0 +1,1 @@
+create table person (id varchar2(255 char) not null, firstname varchar2(255 char), version number(19,0), primary key (id));

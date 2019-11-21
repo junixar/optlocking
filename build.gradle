@@ -18,6 +18,8 @@ dependencies {
 	implementation 'org.flywaydb:flyway-core'
 	runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'org.postgresql:postgresql'
+	runtimeOnly 'com.oracle.ojdbc:ojdbc8'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compile files('libs/ojdbc8-12.2.0.1.jar')
 }
 

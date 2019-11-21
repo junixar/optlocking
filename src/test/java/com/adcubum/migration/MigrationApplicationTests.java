@@ -29,6 +29,7 @@ public class MigrationApplicationTests {
 		person.id = UUID.randomUUID().toString();
 		person.firstname = "testFirstname";
 		person.lastname = "testLastname";
+		person.partnerNr = 11L;
 
 		personService.save(person);
 

@@ -21,4 +21,6 @@ public class Person {
    @Column
    public String lastname;
    
+   @Column
+   public Long partnerNr;
 }
