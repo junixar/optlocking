@@ -1,1 +1,1 @@
-ALTER TABLE person ADD partner_nr LONG;
+ALTER TABLE person ADD partner_nr number(19,0);
