@@ -3,7 +3,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
 	id 'org.flywaydb.flyway' version '6.0.8'
-	id 'org.liquibase.gradle' version '2.0.1'
+	id 'org.liquibase.gradle' version '2.0.2'
 }
 
 group = 'com.adcubum'
@@ -19,12 +19,15 @@ dependencies {
 	implementation "org.hibernate:hibernate-envers"
 	compile 'com.h2database:h2'
 	compile 'org.postgresql:postgresql'
-	compile("com.oracle.ojdbc:ojdbc8")
+	compile 'com.oracle.ojdbc:ojdbc10_g:19.3.0.0'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	compile 'org.springframework.boot:spring-boot-starter-web'
-	compile files('libs/ojdbc8-12.2.0.1.jar')
+	compile 'org.flywaydb:flyway-core'
 
-	liquibaseRuntime 'org.liquibase:liquibase-core:3.5.5'
+	compile 'org.liquibase:liquibase-core:3.8.2'
+	liquibaseRuntime 'ch.qos.logback:logback-core'
+	liquibaseRuntime 'ch.qos.logback:logback-classic'
+	liquibaseRuntime 'org.liquibase:liquibase-core:3.8.2'
 	liquibaseRuntime 'org.liquibase:liquibase-groovy-dsl:2.0.1'
 	liquibaseRuntime 'org.postgresql:postgresql'
 }
@@ -32,23 +35,20 @@ dependencies {
 liquibase {
 	activities {
 		main {
-			changeLogFile 'src/main/resources/db/changelog/changeLogOracle.xml'
-			url 'jdbc:oracle:thin:@//adzh-srlp-db02.intern.cube.ch:1521/pdb02h_5d9d9153205c5_test.adcubum.com'
-			username 'syrius'
-			password 'cube12'
-			classpath 'libs/ojdbc8-12.2.0.1.jar' 
+			url 'jdbc:postgresql://localhost/postgres'
+			username 'postgres'
+			password 'changeme'
+			classpath 'src/main/resources/'
+			changeLogFile 'db/changeLog.xml'
 		}
 	}
 }
 
-//liquibase {
-//	activities {
-//		main {
-//			changeLogFile 'src/main/resources/db/changelog/changeLogPostgresql.xml'
-//			url 'jdbc:postgresql://localhost:5432/postgres'
-//			username 'postgres'
-//			password 'changeme'
-//		}
-//	}
-//}
+flyway {
+	url = 'jdbc:postgresql://localhost/postgres'
+	user = 'postgres'
+	password = 'changeme'
+}
+
+
 
