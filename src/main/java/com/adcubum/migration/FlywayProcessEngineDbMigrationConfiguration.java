@@ -10,7 +10,7 @@ import org.springframework.context.annotation.PropertySource;
 @Configuration
 @ConfigurationProperties(prefix = "processengine.dbmigration")
 @PropertySource("classpath:processengine.properties")
-public class ProcessEngineDbMigrationConfiguration {
+public class FlywayProcessEngineDbMigrationConfiguration {
 
    private String tableName;
 

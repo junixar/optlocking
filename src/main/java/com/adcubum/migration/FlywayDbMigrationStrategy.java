@@ -14,12 +14,12 @@ import java.sql.SQLException;
  * This class implements our own Flyway Migration strategy.
  */
 @Component
-public class DbMigrationStrategy {
+public class FlywayDbMigrationStrategy {
 
    private final Logger logger = LoggerFactory.getLogger(this.getClass());
-   private final ProcessEngineDbMigrationConfiguration processEngineMigrationConfiguration;
+   private final FlywayProcessEngineDbMigrationConfiguration processEngineMigrationConfiguration;
 
-   public DbMigrationStrategy(ProcessEngineDbMigrationConfiguration processEngineMigrationConfiguration) {
+   public FlywayDbMigrationStrategy(FlywayProcessEngineDbMigrationConfiguration processEngineMigrationConfiguration) {
       this.processEngineMigrationConfiguration = processEngineMigrationConfiguration;
    }
 
