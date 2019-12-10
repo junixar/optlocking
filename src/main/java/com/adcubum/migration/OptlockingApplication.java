@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class OptlockingApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(OptlockingApplication.class, args);
+		SpringApplication.run(OptlockingApplication.class, args).close();
 	}
 
 }
