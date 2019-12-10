@@ -2,7 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.1.8.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
-	id 'org.flywaydb.flyway' version '6.0.8'
+	id 'org.flywaydb.flyway' version '5.2.4'
 	id 'org.liquibase.gradle' version '2.0.2'
 }
 
@@ -48,6 +48,11 @@ flyway {
 	url = 'jdbc:postgresql://localhost/postgres'
 	user = 'postgres'
 	password = 'changeme'
+//	url = 'jdbc:oracle:thin:@//adzh-srlp-db05.internal.adcubum.com:1521/pdb05d_5dcaaa5d941c1_yyu01.adcubum.com'
+//	user = 'SYRIUS'
+//	password = 'cube12'
+
+	locations = ['classpath:/db/subB,classpath:/db/subA,classpath:/db/migration']
 }
 
 
