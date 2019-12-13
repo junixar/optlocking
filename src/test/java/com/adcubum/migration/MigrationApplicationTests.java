@@ -34,5 +34,4 @@ public class MigrationApplicationTests {
 
 		person = personService.find(person.id);
 	}
-
 }
