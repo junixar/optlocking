@@ -18,4 +18,10 @@ public class Person {
    
    @Column
    public Long partnerNr;
+   
+   @Column
+   public boolean testboolean;
+   
+   @Column
+   public String testlongvarchar;
 }

@@ -32,6 +32,17 @@ public class MigrationApplicationTests {
 		person.firstname = "testFirstname";
 		person.lastname = "testLastname";
 		person.partnerNr = 77L;
+		person.testboolean = true;
+		String iamlong = "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd";
+		iamlong += iamlong;
+		iamlong += iamlong;
+		iamlong += iamlong;
+		iamlong += iamlong;
+		iamlong += iamlong;
+		iamlong += iamlong;
+		iamlong += iamlong;
+		iamlong += iamlong;
+		person.testlongvarchar = iamlong;
 
 		personService.save(person);
 		person = personService.find(person.id);

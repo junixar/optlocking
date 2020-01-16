@@ -20,7 +20,7 @@
             tableName="person"/>
 	</changeSet>
 	
-	<changeSet author="hugo"	id="2"	runAlways = "false"	runOnChange = "false"	failOnError = "true">
+	<changeSet author="hugo"	id="2"	runAlways = "false"	runOnChange = "true"	failOnError = "true">
     	<addColumn catalogName="syrius"
             schemaName="public"
             tableName="person">
@@ -33,6 +33,30 @@
             schemaName="public"
             tableName="person">
         	<column name="partner_nr" type="BIGINT"/>
+    	</addColumn>
+	</changeSet>
+	
+	<changeSet author="hugo"	id="4"	runAlways = "false"	runOnChange = "false"	failOnError = "true">
+    	<addColumn catalogName="syrius"
+            schemaName="public"
+            tableName="person">
+        	<column name="testboolean" type="boolean"/>
+    	</addColumn>
+	</changeSet>
+	
+	<changeSet author="hugo"	id="5"	runAlways = "false"	runOnChange = "false"	failOnError = "true">
+    	<addColumn catalogName="syrius"
+            schemaName="public"
+            tableName="person">
+        	<column name="testlongvarchar" type="LONGVARCHAR"/>
+    	</addColumn>
+	</changeSet>
+	
+	<changeSet author="hugo"	id="6"	runAlways = "false"	runOnChange = "false"	failOnError = "true">
+    	<addColumn catalogName="syrius"
+            schemaName="public"
+            tableName="person">
+        	<column name="testvarchar" type="VARCHAR(301)"/>
     	</addColumn>
 	</changeSet>
 </databaseChangeLog>
