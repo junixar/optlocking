@@ -4,8 +4,8 @@ plugins {
 	id 'java'
 	id 'org.flywaydb.flyway' version '6.0.8'
 	id 'org.liquibase.gradle' version '2.0.2'
-}
 
+}
 group = 'com.adcubum'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
@@ -19,7 +19,7 @@ dependencies {
 	implementation "org.hibernate:hibernate-envers"
 	compile 'com.h2database:h2'
 	compile 'org.postgresql:postgresql'
-	compile 'com.oracle.ojdbc:ojdbc10_g:19.3.0.0'
+	liquibaseRuntime 'com.oracle.ojdbc:ojdbc8:19.3.0.0'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	compile 'org.springframework.boot:spring-boot-starter-web'
 	compile 'org.flywaydb:flyway-core'
@@ -41,6 +41,14 @@ liquibase {
 			classpath 'src/main/resources/'
 			changeLogFile 'db/changeLog.xml'
 		}
+//		main {
+//			url 'jdbc:oracle:thin:@//adzh-srlp-db05.internal.adcubum.com:1521/pdb05a_5e455089722d9_yyudbmigr.adcubum.com'
+//			username 'SYRIUS'
+//			password 'cube12'
+//			classpath 'src/main/resources/'
+//			changeLogFile 'db/changeLog.xml'
+//
+//		}
 	}
 }
 

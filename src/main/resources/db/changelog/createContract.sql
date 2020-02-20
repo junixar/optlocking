@@ -1,13 +1,6 @@
-CREATE TABLE public.contract
-(
-    id character varying(255) COLLATE pg_catalog."default" NOT NULL,
-    name character varying(255) COLLATE pg_catalog."default",
-    CONSTRAINT pk_contract PRIMARY KEY (id)
-)
-WITH (
-    OIDS = FALSE
-)
-TABLESPACE pg_default;
+--liquibase formatted sql
+--changeset bob:3
+create table c1 (id varchar(255) not null, firstname varchar(255), primary key (id));
 
-ALTER TABLE public.contract
-    OWNER to postgres;
+--changeset yyu:4
+create table c2 (id varchar(255) not null, firstname varchar(255), primary key (id));
